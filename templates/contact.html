@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+    <header class="masthead" style="background-image: url('{% static 'img/contact-bg.jpg' %}')">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+              <h1>Contact Me</h1>
+              <span class="subheading">Have questions? I have answers (maybe).</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>Want to get in touch with me? Drop me a mail and i'll try to get back soon!</p>
+          
+            <div class="control-group">
+              <label>Name: </label>
+              <pre>My Name </pre>
+            </div>
+            <div class="control-group">
+              <label>Email Address: </label>
+              <pre>temp@temp.com</pre>
+            </div>
+            <div class="control-group">
+              <label>Phone Number: </label>
+              <pre>+1234567890</pre>
+            </div>
+            <br>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    {% endblock %}

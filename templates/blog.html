@@ -1,0 +1,41 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+    <header class="masthead" style="background-image: url('{% static 'img/home.jpg' %}')">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>My Blog</h1>
+              <span class="subheading">A list of my personal Blogs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+<!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          {% for i in posts %}
+          <div class="post-preview">
+            <a href="posts/{{i.id}}">
+              <h2 class="post-title">
+                {{i.title}}
+              </h2>
+              {% if i.sub_title %}
+              <h3 class="post-subtitle">
+                {{i.sub_title}}
+              </h3>
+              {% endif %}
+            </a>
+            <p class="post-meta">Posted by
+              {{i.posted_by}} on {{i.published_on}}
+          </div>
+          {% endfor %}
+          
+          <hr>
+
+    {% endblock %}
